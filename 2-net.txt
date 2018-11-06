@@ -1,0 +1,29 @@
+﻿---TestCondition--------
+
+導通(COND IMPNO)        =100.0
+直流電壓(HIPOT VNO)     =300V
+絕緣(INS IMPNO)         =100M
+直流高壓時間(HIPOT TNO) =0.01s
+交流電壓(AC HV VNO)     =300V
+漏電流(LEAKAGE)         =5mA
+交流高壓時間(AC HV TNO) =0.01S
+搖擺測試(HOLD MODE)     =O/S
+搖擺測試2(PSBX TM2)     =4S
+
+---NetList--------------
+
+A01-A03
+A61-A63
+
+A01 = A01/紅色
+A03 = A03/藍色
+A61 = A61/紅色
+A63 = A63/藍色
+
+---Component------------
+
+R1. A01-A02 0100o/25%
+
+D1. A01]A02 1.10V+10%
+
+C3. A01-A02 1.00u-20%
